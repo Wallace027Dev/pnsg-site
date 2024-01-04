@@ -8,13 +8,18 @@
 
 :root {
   --bg: #fff;
+  --font: #c0c0c0;
   --primary: #000;
-  --secondary: #C9942B;
+  --secondary: #c9942b;
   --tertiary: #595959;
+}
+
+.blur {
+  filter: blur(5px);
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   background: var(--bg);
-  color: var(--primary);
+  color: var(--font);
 }
