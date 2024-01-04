@@ -1,4 +1,11 @@
-import { Container, Content, Header, SideBar, SlideContainer } from './styles';
+import {
+  ArticleContainer,
+  Container,
+  Content,
+  Header,
+  SideBar,
+  SlideContainer,
+} from './styles';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
@@ -23,6 +30,24 @@ function App() {
     const content = document.getElementById('content');
     sidebar.style.width = '0';
     content.classList.remove('blur');
+  }
+
+  function Article(props) {
+    return (
+      <ArticleContainer>
+        <img src={destaque1} alt="Artigo tal" />
+        <div>
+          <div>
+            <strong>{props.type}</strong>
+            <span> | {props.data}</span>
+          </div>
+          <div>
+            <h1>{props.title}</h1>
+            <p>{props.description}</p>
+          </div>
+        </div>
+      </ArticleContainer>
+    );
   }
 
   return (
@@ -94,18 +119,37 @@ function App() {
         </SlideContainer>
 
         <Content id="content">
-          <section id="section1">
-            <h2>Section 1</h2>
-            <p>Conteúdo da Seção 1</p>
+          <section>
+            <Article
+              type="ORAÇÃO"
+              data="03.01.2024"
+              title="Santo Anjo"
+              description="Santo anjo do Senhor, meu zelozo guardador..."
+            />
+            <section id="section2">
+              <h2>Section 2</h2>
+              <p>Conteúdo da Seção 2</p>
+            </section>
+            <section id="section3">
+              <h2>Section 3</h2>
+              <p>Conteúdo da Seção 3</p>
+            </section>
           </section>
-          <section id="section2">
-            <h2>Section 2</h2>
-            <p>Conteúdo da Seção 2</p>
-          </section>
-          <section id="section3">
-            <h2>Section 3</h2>
-            <p>Conteúdo da Seção 3</p>
-          </section>
+
+          <aside>
+            <section id="section1">
+              <h2>Section 1</h2>
+              <p>Conteúdo da Seção 1</p>
+            </section>
+            <section id="section2">
+              <h2>Section 2</h2>
+              <p>Conteúdo da Seção 2</p>
+            </section>
+            <section id="section3">
+              <h2>Section 3</h2>
+              <p>Conteúdo da Seção 3</p>
+            </section>
+          </aside>
         </Content>
       </Container>
     </>

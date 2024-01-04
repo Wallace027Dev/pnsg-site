@@ -124,5 +124,52 @@ export const SlideContainer = styled.div`
 export const Content = styled.div`
   margin-left: 0;
   transition: margin-left 0.5s;
-  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  > section {
+    width: 800px;
+    border: red solid 1px;
+  }
+
+  aside {
+    width: 470px;
+    border: red solid 1px;
+  }
+`;
+
+export const ArticleContainer = styled.section`
+  display: flex;
+  flex-direction: row;
+
+  img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 25px;
+  }
+
+  strong {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--secondary);
+  }
+
+  span {
+    font-size: 12px;
+    color: var(--tertiary);
+    word-spacing: 5px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 12px 0;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--tertiary);
+  }
 `;
