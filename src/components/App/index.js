@@ -1,8 +1,14 @@
-import { Content, Header, SideBar } from './styles';
+import { Container, Content, Header, SideBar, SlideContainer } from './styles';
 
-import menu from '../../assets/images/menu.svg';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import menu from '../../assets/icons/menu.svg';
+import instagram from '../../assets/icons/instagram.svg';
 import logo from '../../assets/images/logo.svg';
-import instagram from '../../assets/images/instagram.svg';
+
+import destaque1 from '../../assets/images/destaque1.jpg';
+import destaque2 from '../../assets/images/destaque2.jpg';
+import destaque3 from '../../assets/images/destaque3.jpg';
 
 function App() {
   function handleMenuClick() {
@@ -56,20 +62,52 @@ function App() {
         </button>
       </SideBar>
 
-      <Content id="content">
-        <section id="section1">
-          <h2>Section 1</h2>
-          <p>Conteúdo da Seção 1</p>
-        </section>
-        <section id="section2">
-          <h2>Section 2</h2>
-          <p>Conteúdo da Seção 2</p>
-        </section>
-        <section id="section3">
-          <h2>Section 3</h2>
-          <p>Conteúdo da Seção 3</p>
-        </section>
-      </Content>
+      <Container>
+        <SlideContainer>
+          <Splide
+            options={{
+              autoplay: true,
+              perPage: 1,
+              interval: 2500,
+              arrows: false,
+              height: 450,
+              width: 1320,
+              type: 'loop',
+            }}
+          >
+            <SplideSlide>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src={destaque1} alt="Destaque 1" />
+              </a>
+            </SplideSlide>
+            <SplideSlide>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src={destaque2} alt="Destaque 2" />
+              </a>
+            </SplideSlide>
+            <SplideSlide>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src={destaque3} alt="Destaque 3" />
+              </a>
+            </SplideSlide>
+          </Splide>
+        </SlideContainer>
+
+        <Content id="content">
+          <section id="section1">
+            <h2>Section 1</h2>
+            <p>Conteúdo da Seção 1</p>
+          </section>
+          <section id="section2">
+            <h2>Section 2</h2>
+            <p>Conteúdo da Seção 2</p>
+          </section>
+          <section id="section3">
+            <h2>Section 3</h2>
+            <p>Conteúdo da Seção 3</p>
+          </section>
+        </Content>
+      </Container>
     </>
   );
 }

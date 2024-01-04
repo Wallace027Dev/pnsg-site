@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import '@splidejs/react-splide/css';
 
 export const Header = styled.header`
   background: var(--primary);
@@ -39,6 +40,10 @@ export const Header = styled.header`
   }
 `;
 
+export const Container = styled.div`
+  padding: 0 100px;
+`;
+
 export const SideBar = styled.div`
   height: 100%;
   width: 0;
@@ -52,6 +57,11 @@ export const SideBar = styled.div`
   transition: 0.5s;
   padding-top: 60px;
   box-shadow: 2px 0 5px var(--primary);
+
+  div,
+  a {
+    opacity: 1;
+  }
 
   a {
     padding: 15px 10px;
@@ -98,6 +108,16 @@ export const SideBar = styled.div`
     p {
       font-size: 12px;
     }
+  }
+`;
+
+export const SlideContainer = styled.div`
+  margin: 48px auto;
+
+  img {
+    width: 1320px;
+    height: 450px;
+    object-fit: cover;
   }
 `;
 
