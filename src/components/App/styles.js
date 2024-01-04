@@ -47,16 +47,17 @@ export const SideBar = styled.div`
   top: 0;
   left: 0;
   background: var(--primary);
+  opacity: 0.8;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  box-shadow: 2px 0 5px primary;
+  box-shadow: 2px 0 5px var(--primary);
 
   a {
     padding: 15px 10px;
     text-decoration: none;
     font-size: 18px;
-    color: var(--tertiary);
+    color: var(--font);
     display: block;
     transition: 0.3s;
   }
