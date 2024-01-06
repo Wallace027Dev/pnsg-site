@@ -9,10 +9,11 @@ import {
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
+import ellipsis from '../../assets/icons/ellipsis.svg';
 import menu from '../../assets/icons/menu.svg';
 import instagram from '../../assets/icons/instagram.svg';
-import logo from '../../assets/images/logo.svg';
 
+import logo from '../../assets/images/logo.svg';
 import destaque1 from '../../assets/images/destaque1.jpg';
 import destaque2 from '../../assets/images/destaque2.jpg';
 import destaque3 from '../../assets/images/destaque3.jpg';
@@ -35,17 +36,19 @@ function App() {
   function Article(props) {
     return (
       <ArticleContainer>
-        <img src={destaque1} alt="Artigo tal" />
-        <div>
+        <a href="http://{props.link}" target="_blank" rel="noopener noreferrer">
+          <img src={destaque1} alt="Artigo tal" />
           <div>
-            <strong>{props.type}</strong>
-            <span> | {props.data}</span>
+            <div>
+              <strong>{props.type}</strong>
+              <span> | {props.data}</span>
+            </div>
+            <div>
+              <h1>{props.title}</h1>
+              <p>{props.description}</p>
+            </div>
           </div>
-          <div>
-            <h1>{props.title}</h1>
-            <p>{props.description}</p>
-          </div>
-        </div>
+        </a>
       </ArticleContainer>
     );
   }
@@ -119,21 +122,18 @@ function App() {
         </SlideContainer>
 
         <Content id="content">
-          <section>
+          <section id="section1">
+            <div className="title-section">
+              <img src={ellipsis} alt="Ellipsis Menu" />
+              <h1>ARTIGOS E NOTÍCIAS</h1>
+            </div>
+            <hr />
             <Article
               type="ORAÇÃO"
               data="03.01.2024"
               title="Santo Anjo"
               description="Santo anjo do Senhor, meu zelozo guardador..."
             />
-            <section id="section2">
-              <h2>Section 2</h2>
-              <p>Conteúdo da Seção 2</p>
-            </section>
-            <section id="section3">
-              <h2>Section 3</h2>
-              <p>Conteúdo da Seção 3</p>
-            </section>
           </section>
 
           <aside>

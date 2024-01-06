@@ -129,24 +129,48 @@ export const Content = styled.div`
 
   > section {
     width: 800px;
-    border: red solid 1px;
+
+    .title-section {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        color: var(--primary);
+        font-size: 16px;
+      }
+
+      img {
+        height: 16px;
+      }
+    }
+
+    hr {
+      color: var(--tertiary);
+      margin: 10px 0 30px 0;
+
+      :not(:first) {
+        margin: 30px 0;
+      }
+    }
   }
 
   aside {
     width: 470px;
-    border: red solid 1px;
   }
 `;
 
 export const ArticleContainer = styled.section`
-  display: flex;
-  flex-direction: row;
+  a {
+    display: flex;
+    text-decoration: none;
+  }
 
   img {
     width: 300px;
     height: 180px;
     object-fit: cover;
     margin-right: 25px;
+    border-radius: 2.5px;
   }
 
   strong {
