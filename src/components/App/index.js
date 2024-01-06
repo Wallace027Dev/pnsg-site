@@ -90,7 +90,7 @@ function App() {
         </button>
       </SideBar>
 
-      <Container>
+      <Container id="content">
         <SlideContainer>
           <Splide
             options={{
@@ -121,8 +121,8 @@ function App() {
           </Splide>
         </SlideContainer>
 
-        <Content id="content">
-          <section id="section1">
+        <Content>
+          <section>
             <div className="title-section">
               <img src={ellipsis} alt="Ellipsis Menu" />
               <h1>ARTIGOS E NOTÍCIAS</h1>
@@ -137,18 +137,26 @@ function App() {
           </section>
 
           <aside>
-            <section id="section1">
-              <h2>Section 1</h2>
-              <p>Conteúdo da Seção 1</p>
-            </section>
-            <section id="section2">
-              <h2>Section 2</h2>
-              <p>Conteúdo da Seção 2</p>
-            </section>
-            <section id="section3">
-              <h2>Section 3</h2>
-              <p>Conteúdo da Seção 3</p>
-            </section>
+            <div className="title-section">
+              <img src={ellipsis} alt="Ellipsis Menu" />
+              <h1>HOMILIAS</h1>
+            </div>
+            <hr />
+            <div className="homilia-video">
+              <video controls height={260} width={470} preload="none">
+                Desculpe, mas algo de errado aconteceu com seu vídeo
+              </video>
+              <div>
+                <div className="video-text">
+                  <h1>Nome do vídeo</h1>
+                  <p>Descrição do vídeo</p>
+                </div>
+                <div className="video-shortcuts">
+                  <img src={instagram} alt="Instagram Shortcut" />
+                  <button>Ler a meditação</button>
+                </div>
+              </div>
+            </div>
           </aside>
         </Content>
       </Container>
