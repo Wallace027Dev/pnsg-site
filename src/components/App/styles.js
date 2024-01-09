@@ -112,7 +112,7 @@ export const SideBar = styled.div`
   }
 `;
 
-export const SlideContainer = styled.div`
+export const SlideMain = styled.div`
   margin: 48px auto;
 
   img {
@@ -123,10 +123,12 @@ export const SlideContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  margin-left: 0;
-  transition: margin-left 0.5s;
-  display: flex;
-  justify-content: space-between;
+  main {
+    margin-left: 0;
+    transition: margin-left 0.5s;
+    display: flex;
+    justify-content: space-between;
+  }
 
   hr {
     color: var(--tertiary);
@@ -281,6 +283,23 @@ export const HomiliaVideo = styled.div`
         transition: 0.4s ease-in-out;
         letter-spacing: 0.5px;
       }
+    }
+  }
+`;
+
+export const SlideBooks = styled.div`
+  margin: 48px auto;
+  text-align: center;
+
+  div {
+    margin: 10px 0 30px 0;
+  }
+
+  a {
+    img {
+      width: 350px;
+      height: 200px;
+      object-fit: cover;
     }
   }
 `;

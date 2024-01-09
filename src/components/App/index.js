@@ -2,10 +2,11 @@ import {
   ArticleContainer,
   Container,
   Content,
+  SlideMain,
   Header,
   HomiliaVideo,
   SideBar,
-  SlideContainer,
+  SlideBooks,
 } from './styles';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
@@ -118,7 +119,7 @@ function App() {
       </SideBar>
 
       <Container id="content">
-        <SlideContainer>
+        <SlideMain>
           <Splide
             options={{
               autoplay: true,
@@ -146,36 +147,86 @@ function App() {
               </a>
             </SplideSlide>
           </Splide>
-        </SlideContainer>
+        </SlideMain>
 
         <Content>
-          <section>
-            <div className="title-section">
-              <img src={ellipsis} alt="Ellipsis Menu" />
-              <h1>ARTIGOS E NOTÍCIAS</h1>
-            </div>
-            <hr />
-            <Article
-              type="Nome do tipo"
-              data="01.01.0001"
-              title="Nome do Artigo"
-              description="Descrição do artigo"
-            />
-          </section>
+          <main>
+            <section>
+              <div className="title-section">
+                <img src={ellipsis} alt="Ellipsis Menu" />
+                <h1>ARTIGOS E NOTÍCIAS</h1>
+              </div>
+              <hr />
+              <Article
+                type="Nome do tipo"
+                data="01.01.0001"
+                title="Nome do Artigo"
+                description="Descrição do artigo"
+              />
+            </section>
 
-          <aside>
+            <aside>
+              <div className="title-section">
+                <img src={ellipsis} alt="Ellipsis Menu" />
+                <h1>HOMILIAS</h1>
+              </div>
+              <hr />
+              <Homilia
+                title="Nome da Homilia"
+                description="Descrição da Homilia"
+                instagramLink="link para o instagram"
+                buttonLink="link para outra página"
+              />
+            </aside>
+          </main>
+          <SlideBooks>
             <div className="title-section">
-              <img src={ellipsis} alt="Ellipsis Menu" />
-              <h1>HOMILIAS</h1>
+              <img src={ellipsis} alt="Ellipsis" />
+              <h1>INDICAÇÃO DE LIVROS</h1>
             </div>
-            <hr />
-            <Homilia
-              title="Nome da Homilia"
-              description="Descrição da Homilia"
-              instagramLink="link para o instagram"
-              buttonLink="link para outra página"
-            />
-          </aside>
+            <Splide
+              options={{
+                autoplay: true,
+                perPage: 3,
+                interval: 2500,
+                arrows: true,
+                height: 240,
+                width: 1320,
+                type: 'loop',
+              }}
+            >
+              <SplideSlide>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <img src={destaque1} alt="Destaque 1" />
+                </a>
+              </SplideSlide>
+              <SplideSlide>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <img src={destaque2} alt="Destaque 2" />
+                </a>
+              </SplideSlide>
+              <SplideSlide>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <img src={destaque3} alt="Destaque 3" />
+                </a>
+              </SplideSlide>
+              <SplideSlide>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <img src={destaque1} alt="Destaque 1" />
+                </a>
+              </SplideSlide>
+              <SplideSlide>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <img src={destaque2} alt="Destaque 2" />
+                </a>
+              </SplideSlide>
+              <SplideSlide>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <img src={destaque3} alt="Destaque 3" />
+                </a>
+              </SplideSlide>
+            </Splide>
+          </SlideBooks>
         </Content>
       </Container>
     </>
