@@ -3,6 +3,7 @@ import {
   Container,
   Content,
   Header,
+  HomiliaVideo,
   SideBar,
   SlideContainer,
 } from './styles';
@@ -33,23 +34,49 @@ function App() {
     content.classList.remove('blur');
   }
 
-  function Article(props) {
+  function Article({ link, type, data, title, description }) {
     return (
-      <ArticleContainer>
-        <a href="http://{props.link}" target="_blank" rel="noopener noreferrer">
-          <img src={destaque1} alt="Artigo tal" />
+      <ArticleContainer href={link} target="_blank" rel="noopener noreferrer">
+        <img src={destaque1} alt="Artigo tal" />
+        <div>
           <div>
-            <div>
-              <strong>{props.type}</strong>
-              <span> | {props.data}</span>
-            </div>
-            <div>
-              <h1>{props.title}</h1>
-              <p>{props.description}</p>
-            </div>
+            <strong>{type}</strong>
+            <span> | {data}</span>
           </div>
-        </a>
+          <div>
+            <h1>{title}</h1>
+            <p>{description}</p>
+          </div>
+        </div>
       </ArticleContainer>
+    );
+  }
+
+  function Homilia({ title, description, instagramLink, buttonLink }) {
+    return (
+      <HomiliaVideo>
+        <video controls height={260} width={469} preload="none">
+          Desculpe, mas algo de errado aconteceu com seu vídeo
+        </video>
+        <div>
+          <div className="video-text">
+            <h1>{title}</h1>
+            <p>{description}</p>
+          </div>
+          <div className="video-shortcuts">
+            {instagramLink ? (
+              <a href={instagramLink} target="_blank" rel="noopener noreferrer">
+                <img src={instagram} alt="Instagram Shortcut" />
+              </a>
+            ) : null}
+            {buttonLink ? (
+              <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+                <button>Ler a meditação</button>
+              </a>
+            ) : null}
+          </div>
+        </div>
+      </HomiliaVideo>
     );
   }
 
@@ -129,10 +156,10 @@ function App() {
             </div>
             <hr />
             <Article
-              type="ORAÇÃO"
-              data="03.01.2024"
-              title="Santo Anjo"
-              description="Santo anjo do Senhor, meu zelozo guardador..."
+              type="Nome do tipo"
+              data="01.01.0001"
+              title="Nome do Artigo"
+              description="Descrição do artigo"
             />
           </section>
 
@@ -142,21 +169,12 @@ function App() {
               <h1>HOMILIAS</h1>
             </div>
             <hr />
-            <div className="homilia-video">
-              <video controls height={260} width={470} preload="none">
-                Desculpe, mas algo de errado aconteceu com seu vídeo
-              </video>
-              <div>
-                <div className="video-text">
-                  <h1>Nome do vídeo</h1>
-                  <p>Descrição do vídeo</p>
-                </div>
-                <div className="video-shortcuts">
-                  <img src={instagram} alt="Instagram Shortcut" />
-                  <button>Ler a meditação</button>
-                </div>
-              </div>
-            </div>
+            <Homilia
+              title="Nome da Homilia"
+              description="Descrição da Homilia"
+              instagramLink="link para o instagram"
+              buttonLink="link para outra página"
+            />
           </aside>
         </Content>
       </Container>
