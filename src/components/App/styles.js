@@ -364,7 +364,6 @@ export const Footer = styled.footer`
   background: var(--primary);
   width: 100%;
   padding: 140px 0;
-  border: red solid 1px;
 
   .footer-container {
     display: flex;
