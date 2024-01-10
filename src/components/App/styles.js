@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import '@splidejs/react-splide/css';
 
 export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   background: var(--primary);
   height: 55px;
   width: 100%;
@@ -9,6 +12,11 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
+  transition: background-color 0.3s ease;
+
+  &.scrolled {
+    background: var(--bg);
+  }
 
   button {
     display: flex;
@@ -43,6 +51,10 @@ export const Header = styled.header`
 
 export const Container = styled.div`
   padding: 0 100px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const SideBar = styled.div`

@@ -21,6 +21,17 @@ import destaque2 from '../../assets/images/destaque2.jpg';
 import destaque3 from '../../assets/images/destaque3.jpg';
 
 function App() {
+  document.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
   const booksIndication = [
     {
       slideTitle: 'INDICAÇÃO DE LIVROS',
@@ -137,7 +148,7 @@ function App() {
             perPage: 4,
             interval: 2500,
             arrows: true,
-            height: 350,
+            height: 250,
             width: 1320,
             type: 'loop',
           }}
