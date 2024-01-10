@@ -169,17 +169,19 @@ function App() {
   return (
     <>
       <Header>
-        <button id="menuBtn" onClick={handleMenuClick}>
-          <img src={menu} alt="Menu" />
-          <span>MENU</span>
-        </button>
-        <img
-          className="header-logo"
-          src={logo}
-          alt="Paróquia Nossa Senhora Da Glória"
-        />
-        <div className="header-search">
-          <img src={instagram} alt="Instagram" />
+        <div>
+          <button id="menuBtn" onClick={handleMenuClick}>
+            <img src={menu} alt="Menu" />
+            <span>MENU</span>
+          </button>
+          <img
+            className="header-logo"
+            src={logo}
+            alt="Paróquia Nossa Senhora Da Glória"
+          />
+          <div className="header-search">
+            <img src={instagram} alt="Instagram" />
+          </div>
         </div>
       </Header>
 

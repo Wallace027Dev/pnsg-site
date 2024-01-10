@@ -7,45 +7,58 @@ export const Header = styled.header`
   z-index: 1000;
   background: var(--primary);
   height: 55px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 100px;
-  transition: background-color 0.3s ease;
+  width: 100%;
+
+  > div {
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: 10px auto;
+
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      background: transparent;
+
+      img {
+        height: 25px;
+        margin-right: 12px;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--font);
+      }
+
+      :hover {
+        cursor: pointer;
+      }
+    }
+
+    .header-logo {
+      height: 30px;
+      position: absolute;
+      left: 50%;
+    }
+
+    .header-search {
+      img {
+        height: 28px;
+      }
+
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
 
   &.scrolled {
     background: var(--bg);
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    border: none;
-    background: transparent;
-
-    img {
-      height: 25px;
-      margin-right: 12px;
-    }
-
-    span {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--font);
-    }
-  }
-
-  .header-logo {
-    height: 30px;
-    position: absolute;
-    left: 50%;
-  }
-
-  .header-search {
-    img {
-      height: 28px;
-    }
   }
 `;
 
@@ -58,6 +71,7 @@ export const Container = styled.div`
 `;
 
 export const SideBar = styled.div`
+  margin-top: 54px;
   height: 100%;
   width: 0;
   position: fixed;
@@ -65,7 +79,7 @@ export const SideBar = styled.div`
   top: 0;
   left: 0;
   background: var(--primary);
-  opacity: 0.8;
+  opacity: 0.9;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
