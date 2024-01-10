@@ -34,8 +34,9 @@ export const Header = styled.header`
         color: var(--font);
       }
 
-      :hover {
+      &:hover {
         cursor: pointer;
+        opacity: 0.8;
       }
     }
 
@@ -45,13 +46,14 @@ export const Header = styled.header`
       left: 50%;
     }
 
-    .header-search {
+    .instagram-img {
       img {
         height: 28px;
       }
 
       :hover {
         cursor: pointer;
+        opacity: 0.8;
       }
     }
   }
@@ -399,9 +401,9 @@ export const Footer = styled.footer`
     & + a {
       margin-top: 6px;
     }
-  }
-  :hover {
-    color: var(--bg);
+    &:hover {
+      color: var(--bg);
+    }
   }
 
   hr {

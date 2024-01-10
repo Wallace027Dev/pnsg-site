@@ -180,7 +180,7 @@ function App() {
             src={logo}
             alt="Paróquia Nossa Senhora Da Glória"
           />
-          <div className="header-search">
+          <div className="instagram-img">
             <img src={instagram} alt="Instagram" />
           </div>
         </div>
