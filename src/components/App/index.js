@@ -7,6 +7,7 @@ import {
   HomiliaVideo,
   SideBar,
   SlideIndicationsContainer,
+  Footer,
 } from './styles';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
@@ -235,7 +236,6 @@ function App() {
             </SplideSlide>
           </Splide>
         </SlideMain>
-
         <Content>
           <main>
             <section>
@@ -282,6 +282,52 @@ function App() {
           ))}
         </Content>
       </Container>
+
+      <Footer>
+        <div className="footer-container">
+          <section>
+            <div>
+              <h1>ASSUNTO 1</h1>
+              <a href="/">Opção 1</a>
+              <a href="/">Opção 2</a>
+              <a href="/">Opção 3</a>
+              <a href="/">Opção 4</a>
+            </div>
+            <div>
+              <h1>ASSUNTO 2</h1>
+              <a href="/">Opção 1</a>
+              <a href="/">Opção 2</a>
+              <a href="/">Opção 3</a>
+              <a href="/">Opção 4</a>
+              <a href="/">Opção 5</a>
+              <a href="/">Opção 6</a>
+            </div>
+            <div>
+              <h1>ASSUNTO 3</h1>
+              <a href="/">Opção 1</a>
+              <a href="/">Opção 2</a>
+              <a href="/">Opção 3</a>
+              <a href="/">Opção 4</a>
+              <a href="/">Opção 5</a>
+            </div>
+          </section>
+
+          <div>
+            <h1>REDES</h1>
+            <a href="/">Rede 1</a>
+            <a href="/">Rede 2</a>
+            <a href="/">Rede 3</a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div className="footer-logo">
+          <img src={logo} alt="Paróquia Nossa Senhora da Glória Horizontal" />
+          <h1>Paróquia Nossa Senhora da Glória</h1>
+          <p>"Nossa senhora da Glória, rogai por nós"</p>
+        </div>
+      </Footer>
     </>
   );
 }

@@ -11,7 +11,6 @@ export const Header = styled.header`
   width: 100%;
 
   > div {
-    transition: background-color 0.3s ease;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,6 +58,8 @@ export const Header = styled.header`
 
   &.scrolled {
     background: var(--bg);
+    opacity: 0.9;
+    transition: 0.3s ease;
   }
 `;
 
@@ -71,19 +72,19 @@ export const Container = styled.div`
 `;
 
 export const SideBar = styled.div`
-  margin-top: 54px;
+  margin-top: 55px;
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background: var(--primary);
+  background: var(--bg);
   opacity: 0.9;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  box-shadow: 2px 0 5px var(--primary);
+  box-shadow: 2px 0 5px var(--tertiary);
 
   div,
   a {
@@ -355,6 +356,75 @@ export const SlideIndicationsContainer = styled.div`
         opacity: 1;
         transition: opacity 1.25s ease;
       }
+    }
+  }
+`;
+
+export const Footer = styled.footer`
+  background: var(--primary);
+  width: 100%;
+  padding: 140px 0;
+  border: red solid 1px;
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  section {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 20px;
+    color: var(--bg);
+    margin-bottom: 40px;
+  }
+
+  a {
+    font-size: 16px;
+    color: var(--font);
+    text-decoration: none;
+
+    & + a {
+      margin-top: 6px;
+    }
+  }
+  :hover {
+    color: var(--bg);
+  }
+
+  hr {
+    margin: 32px auto;
+    max-width: 1320px;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--tertiary);
+
+    img {
+      height: 74px;
+      margin-bottom: 12px;
+    }
+
+    h1,
+    p {
+      font-size: 16px;
+      margin: 0;
     }
   }
 `;
