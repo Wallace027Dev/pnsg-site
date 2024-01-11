@@ -4,10 +4,16 @@ const Container = styled.header`
   position: fixed;
   top: 0;
   z-index: 1000;
+  width: 100%;
   background: var(--primary);
   height: 55px;
   padding: 0 100px;
-  width: 100%;
+  transition: background 0.3s ease, opacity 0.3s ease;
+
+  &.scrolled {
+    background: var(--bg);
+    opacity: 0.95;
+  }
 
   > div {
     display: flex;
@@ -42,7 +48,7 @@ const Container = styled.header`
     .header-logo {
       height: 30px;
       position: absolute;
-      left: 50%;
+      left: 49.5%;
     }
 
     .instagram-img {
@@ -50,17 +56,38 @@ const Container = styled.header`
         height: 28px;
       }
 
-      :hover {
+      &:hover {
         cursor: pointer;
         opacity: 0.8;
       }
     }
   }
 
-  &.scrolled {
-    background: var(--bg);
-    opacity: 0.95;
-    transition: 0.3s ease;
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media only screen and (max-width: 425px) {
+    height: 40px;
+    > div {
+      margin: 5px auto;
+
+      button {
+        img {
+          margin-right: 0;
+        }
+
+        span {
+          font-size: 0;
+          visibility: hidden;
+        }
+      }
+
+      .header-logo {
+        height: 25px;
+        left: 47.5%;
+      }
+    }
   }
 `;
 
