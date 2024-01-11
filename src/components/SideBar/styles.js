@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const Container = styled.div`
   margin-top: 55px;
   height: 100%;
   width: 0;
@@ -65,6 +65,10 @@ export const Container = styled.div`
     p {
       font-size: 12px;
     }
+  }
+
+  @media only screen and (max-width: 425px) {
+    margin-top: 40px;
   }
 `;
 

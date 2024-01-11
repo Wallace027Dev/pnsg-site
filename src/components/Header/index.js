@@ -1,23 +1,15 @@
-import React, { useState } from 'react';
-
 import Container from './styles';
 
-import menuIcon from '../../assets/icons/menu.svg';
-import instagramIcon from '../../assets/icons/instagram.svg';
+import menu from '../../assets/icons/menu.svg';
+import instagram from '../../assets/icons/instagram.svg';
 import logo from '../../assets/images/logo.svg';
 
-function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleMenuClick = () => {
-    setMenuOpen(!menuOpen);
-  };
-
+function Header({ onMenuClick }) {
   return (
-    <Container className={menuOpen ? 'scrolled' : ''}>
+    <Container>
       <div>
-        <button id="menuBtn" onClick={handleMenuClick}>
-          <img src={menuIcon} alt="Menu" />
+        <button id="menuBtn" onClick={onMenuClick}>
+          <img src={menu} alt="Menu" />
           <span>MENU</span>
         </button>
         <img
@@ -26,11 +18,10 @@ function Header() {
           alt="Paróquia Nossa Senhora Da Glória"
         />
         <div className="instagram-img">
-          <img src={instagramIcon} alt="Instagram" />
+          <img src={instagram} alt="Instagram" />
         </div>
       </div>
     </Container>
   );
 }
-
 export default Header;

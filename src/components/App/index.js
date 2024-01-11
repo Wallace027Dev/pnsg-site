@@ -1,4 +1,10 @@
-/* import {
+import { useState } from 'react';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import Header from '../Header';
+import SideBar from '../SideBar';
+
+import {
   ArticleContainer,
   Container,
   Content,
@@ -8,17 +14,13 @@
   Footer,
 } from './styles';
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-
 import ellipsis from '../../assets/icons/ellipsis.svg';
 import instagram from '../../assets/icons/instagram.svg';
 
 import logo from '../../assets/images/logo.svg';
 import destaque1 from '../../assets/images/destaque1.jpg';
 import destaque2 from '../../assets/images/destaque2.jpg';
-import destaque3 from '../../assets/images/destaque3.jpg'; */
-import Header from '../Header';
-import SideBar from '../SideBar';
+import destaque3 from '../../assets/images/destaque3.jpg';
 
 function App() {
   document.addEventListener('scroll', () => {
@@ -32,7 +34,20 @@ function App() {
     }
   });
 
-  /*   const booksIndication = [
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isContentBlurred, setContentBlurred] = useState(false);
+
+  const handleMenuClick = () => {
+    setSidebarOpen(!isSidebarOpen);
+    setContentBlurred(!isSidebarOpen);
+  };
+
+  const handleLinkClick = () => {
+    setSidebarOpen(false);
+    setContentBlurred(false);
+  };
+
+  const booksIndication = [
     {
       slideTitle: 'INDICAÇÃO DE LIVROS',
       books: [
@@ -150,14 +165,14 @@ function App() {
         </Splide>
       </SlideIndicationsContainer>
     );
-  } */
+  }
 
   return (
     <>
-      <Header />
-      <SideBar />
+      <Header onMenuClick={handleMenuClick} />
+      <SideBar isOpen={isSidebarOpen} onLinkClick={handleLinkClick} />
 
-      {/* <Container id="content">
+      <Container className={isContentBlurred ? 'blur' : ''}>
         <SlideMain>
           <Splide
             options={{
@@ -278,7 +293,7 @@ function App() {
           <h1>Paróquia Nossa Senhora da Glória</h1>
           <p>"Nossa senhora da Glória, rogai por nós"</p>
         </div>
-      </Footer> */}
+      </Footer>
     </>
   );
 }
