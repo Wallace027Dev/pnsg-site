@@ -3,7 +3,6 @@ import {
   Container,
   Content,
   SlideMain,
-  Header,
   HomiliaVideo,
   SideBar,
   SlideIndicationsContainer,
@@ -13,13 +12,13 @@ import {
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import ellipsis from '../../assets/icons/ellipsis.svg';
-import menu from '../../assets/icons/menu.svg';
 import instagram from '../../assets/icons/instagram.svg';
 
 import logo from '../../assets/images/logo.svg';
 import destaque1 from '../../assets/images/destaque1.jpg';
 import destaque2 from '../../assets/images/destaque2.jpg';
 import destaque3 from '../../assets/images/destaque3.jpg';
+import Header from '../Header';
 
 function App() {
   document.addEventListener('scroll', () => {
@@ -75,13 +74,6 @@ function App() {
       ],
     },
   ];
-
-  function handleMenuClick() {
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-    sidebar.style.width = '250px';
-    content.classList.add('blur');
-  }
 
   function handleLinkClick() {
     const sidebar = document.getElementById('sidebar');
@@ -169,23 +161,7 @@ function App() {
 
   return (
     <>
-      <Header>
-        <div>
-          <button id="menuBtn" onClick={handleMenuClick}>
-            <img src={menu} alt="Menu" />
-            <span>MENU</span>
-          </button>
-          <img
-            className="header-logo"
-            src={logo}
-            alt="Paróquia Nossa Senhora Da Glória"
-          />
-          <div className="instagram-img">
-            <img src={instagram} alt="Instagram" />
-          </div>
-        </div>
-      </Header>
-
+      <Header />
       <SideBar id="sidebar">
         <div className="nav-header">
           <img src={logo} alt="Paróquia Nossa Senhora da Glória Horizontal" />
