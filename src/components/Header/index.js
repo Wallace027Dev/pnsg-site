@@ -1,21 +1,23 @@
-import menu from '../../assets/icons/menu.svg';
-import instagram from '../../assets/icons/instagram.svg';
-import logo from '../../assets/images/logo.svg';
+import React, { useState } from 'react';
+
 import Container from './styles';
 
+import menuIcon from '../../assets/icons/menu.svg';
+import instagramIcon from '../../assets/icons/instagram.svg';
+import logo from '../../assets/images/logo.svg';
+
 function Header() {
-  function handleMenuClick() {
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-    sidebar.style.width = '250px';
-    content.classList.add('blur');
-  }
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <Container>
+    <Container className={menuOpen ? 'scrolled' : ''}>
       <div>
         <button id="menuBtn" onClick={handleMenuClick}>
-          <img src={menu} alt="Menu" />
+          <img src={menuIcon} alt="Menu" />
           <span>MENU</span>
         </button>
         <img
@@ -24,10 +26,11 @@ function Header() {
           alt="Paróquia Nossa Senhora Da Glória"
         />
         <div className="instagram-img">
-          <img src={instagram} alt="Instagram" />
+          <img src={instagramIcon} alt="Instagram" />
         </div>
       </div>
     </Container>
   );
 }
+
 export default Header;
