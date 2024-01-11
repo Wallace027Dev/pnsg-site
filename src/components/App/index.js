@@ -9,18 +9,17 @@ import {
   Container,
   Content,
   SlideMain,
-  HomiliaVideo,
   SlideIndicationsContainer,
   Footer,
 } from './styles';
 
 import ellipsis from '../../assets/icons/ellipsis.svg';
-import instagram from '../../assets/icons/instagram.svg';
 
 import logo from '../../assets/images/logo.svg';
 import destaque1 from '../../assets/images/destaque1.jpg';
 import destaque2 from '../../assets/images/destaque2.jpg';
 import destaque3 from '../../assets/images/destaque3.jpg';
+import AsideContainer from '../AsideContainer';
 
 function App() {
   document.addEventListener('scroll', () => {
@@ -89,34 +88,6 @@ function App() {
       ],
     },
   ];
-
-  function Homilia({ title, description, instagramLink, buttonLink }) {
-    return (
-      <HomiliaVideo>
-        <video controls height={260} width={469} preload="none">
-          Desculpe, mas algo de errado aconteceu com seu vídeo
-        </video>
-        <div>
-          <div className="video-text">
-            <h1>{title}</h1>
-            <p>{description}</p>
-          </div>
-          <div className="video-shortcuts">
-            {instagramLink ? (
-              <a href={instagramLink} target="_blank" rel="noopener noreferrer">
-                <img src={instagram} alt="Instagram Shortcut" />
-              </a>
-            ) : null}
-            {buttonLink ? (
-              <a href={buttonLink} target="_blank" rel="noopener noreferrer">
-                <button>Ler a meditação</button>
-              </a>
-            ) : null}
-          </div>
-        </div>
-      </HomiliaVideo>
-    );
-  }
 
   function SlideIndications({ indicationMap, slideTitle }) {
     return (
@@ -207,7 +178,7 @@ function App() {
                 <h1>HOMILIAS</h1>
               </div>
               <hr />
-              <Homilia
+              <AsideContainer
                 title="Nome da Homilia"
                 description="Descrição da Homilia"
                 instagramLink="link para o instagram"
