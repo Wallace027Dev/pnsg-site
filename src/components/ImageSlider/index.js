@@ -1,12 +1,12 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-function ImageSlider({ images, width, height, interval, autoplay }) {
+function ImageSlider({ images, width, height, interval, perPage, arrows }) {
   const sliderOptions = {
-    autoplay: autoplay || true,
-    perPage: 1,
+    autoplay: true,
+    arrows: arrows,
+    perPage: perPage || 1,
     interval: interval || 2500,
-    arrows: false,
     height: height || 450,
     width: width || 1320,
     type: 'loop',
@@ -16,8 +16,8 @@ function ImageSlider({ images, width, height, interval, autoplay }) {
     <Splide options={sliderOptions}>
       {images.map((image, index) => (
         <SplideSlide key={index}>
-          <a href={`http://`} target="_blank" rel="noopener noreferrer">
-            <img src={image} alt={`Destaque ${index + 1}`} />
+          <a href={image.link} target="_blank" rel="noopener noreferrer">
+            <img src={image.photo} alt={`Destaque ${image.name}`} />
           </a>
         </SplideSlide>
       ))}

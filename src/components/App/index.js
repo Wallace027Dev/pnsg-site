@@ -5,12 +5,7 @@ import Header from '../Header';
 import SideBar from '../SideBar';
 import ArticleContainer from '../ArticleContainer';
 
-import {
-  Container,
-  Content,
-  SlideIndicationsContainer,
-  Footer,
-} from './styles';
+import { Container, Content, Footer } from './styles';
 
 import ellipsis from '../../assets/icons/ellipsis.svg';
 
@@ -47,81 +42,44 @@ function App() {
     setContentBlurred(false);
   };
 
-  const imagesForSlider = [destaque1, destaque2, destaque3];
+  const imagesForSlider = [
+    { name: 'destaque 1', link: '/', photo: destaque1 },
+    { name: 'destaque 2', link: '/', photo: destaque2 },
+    { name: 'destaque 3', link: '/', photo: destaque3 },
+  ];
 
   const booksIndication = [
     {
-      slideTitle: 'INDICAÇÃO DE LIVROS',
-      books: [
-        {
-          name: 'Imitação de Cristo',
-          link: 'https://www.amazon.com.br/Imita%C3%A7%C3%A3o-Cristo-Tom%C3%A1s-Kempis/dp/8594318820',
-          photo:
-            'https://m.media-amazon.com/images/I/71hz619E6aL._AC_UF1000,1000_QL80_.jpg',
-        },
-        {
-          name: 'Confissões',
-          link: 'https://www.amazon.com.br/Confiss%C3%B5es-Santo-Agostinho/dp/859431891X/ref=pd_bxgy_img_d_sccl_1/130-6092821-8984424?pd_rd_w=zkaFM&content-id=amzn1.sym.758f3509-df88-4265-806c-565a738dc05d&pf_rd_p=758f3509-df88-4265-806c-565a738dc05d&pf_rd_r=D3Z9CC2FWM1619RGZ86B&pd_rd_wg=ECrE1&pd_rd_r=360e98b5-2390-423f-8fd3-41714ff79a47&pd_rd_i=859431891X&psc=1',
-          photo: 'https://m.media-amazon.com/images/I/71VQR8rTBXL._SY466_.jpg',
-        },
-        {
-          name: 'O Homem Eterno',
-          link: 'https://www.amazon.com.br/homem-eterno-G-K-Chesterton/dp/6555521686/ref=pd_bxgy_img_d_sccl_1/130-6092821-8984424?pd_rd_w=pWMop&content-id=amzn1.sym.758f3509-df88-4265-806c-565a738dc05d&pf_rd_p=758f3509-df88-4265-806c-565a738dc05d&pf_rd_r=R933KM3PSDX7TRJ7FDVZ&pd_rd_wg=NWhpA&pd_rd_r=b5f39cdb-4382-44fa-88f2-16c3b8d271fa&pd_rd_i=6555521686&psc=1',
-          photo: 'https://m.media-amazon.com/images/I/71fG3yWsyML._SY466_.jpg',
-        },
-        {
-          name: 'Ortodoxia',
-          link: 'https://www.amazon.com.br/Ortodoxia-G-K-Chersterton/dp/8594318928/ref=pd_bxgy_img_d_sccl_1/130-6092821-8984424?pd_rd_w=KXVeF&content-id=amzn1.sym.758f3509-df88-4265-806c-565a738dc05d&pf_rd_p=758f3509-df88-4265-806c-565a738dc05d&pf_rd_r=BTATQ7T0V7KK4057MRPC&pd_rd_wg=Pe9Vh&pd_rd_r=18d4a8b9-6abe-4bb8-97cd-e7bfc3f8dd04&pd_rd_i=8594318928&psc=1',
-          photo: 'https://m.media-amazon.com/images/I/71sz0YXsZGL._SY466_.jpg',
-        },
-      ],
+      name: 'Imitação de Cristo',
+      link: 'https://www.amazon.com.br/Imita%C3%A7%C3%A3o-Cristo-Tom%C3%A1s-Kempis/dp/8594318820',
+      photo:
+        'https://m.media-amazon.com/images/I/71hz619E6aL._AC_UF1000,1000_QL80_.jpg',
+    },
+    {
+      name: 'Confissões',
+      link: 'https://www.amazon.com.br/Confiss%C3%B5es-Santo-Agostinho/dp/859431891X/ref=pd_bxgy_img_d_sccl_1/130-6092821-8984424?pd_rd_w=zkaFM&content-id=amzn1.sym.758f3509-df88-4265-806c-565a738dc05d&pf_rd_p=758f3509-df88-4265-806c-565a738dc05d&pf_rd_r=D3Z9CC2FWM1619RGZ86B&pd_rd_wg=ECrE1&pd_rd_r=360e98b5-2390-423f-8fd3-41714ff79a47&pd_rd_i=859431891X&psc=1',
+      photo: 'https://m.media-amazon.com/images/I/71VQR8rTBXL._SY466_.jpg',
+    },
+    {
+      name: 'O Homem Eterno',
+      link: 'https://www.amazon.com.br/homem-eterno-G-K-Chesterton/dp/6555521686/ref=pd_bxgy_img_d_sccl_1/130-6092821-8984424?pd_rd_w=pWMop&content-id=amzn1.sym.758f3509-df88-4265-806c-565a738dc05d&pf_rd_p=758f3509-df88-4265-806c-565a738dc05d&pf_rd_r=R933KM3PSDX7TRJ7FDVZ&pd_rd_wg=NWhpA&pd_rd_r=b5f39cdb-4382-44fa-88f2-16c3b8d271fa&pd_rd_i=6555521686&psc=1',
+      photo: 'https://m.media-amazon.com/images/I/71fG3yWsyML._SY466_.jpg',
+    },
+    {
+      name: 'Ortodoxia',
+      link: 'https://www.amazon.com.br/Ortodoxia-G-K-Chersterton/dp/8594318928/ref=pd_bxgy_img_d_sccl_1/130-6092821-8984424?pd_rd_w=KXVeF&content-id=amzn1.sym.758f3509-df88-4265-806c-565a738dc05d&pf_rd_p=758f3509-df88-4265-806c-565a738dc05d&pf_rd_r=BTATQ7T0V7KK4057MRPC&pd_rd_wg=Pe9Vh&pd_rd_r=18d4a8b9-6abe-4bb8-97cd-e7bfc3f8dd04&pd_rd_i=8594318928&psc=1',
+      photo: 'https://m.media-amazon.com/images/I/71sz0YXsZGL._SY466_.jpg',
     },
   ];
 
   const filmsIndication = [
     {
-      slideTitle: 'INDICAÇÃO DE FILMES',
-      films: [
-        {
-          name: 'A Paixão de Cristo',
-          link: 'https://www.starplus.com/pt-br/movies/a-paixao-de-cristo/3yap94iqersK',
-          photo:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToM39JuAQDKksB7CKrgScA-Sh6Ct6Lcxk_N71nCQZcG7xGqKYD',
-        },
-      ],
+      name: 'A Paixão de Cristo',
+      link: 'https://www.starplus.com/pt-br/movies/a-paixao-de-cristo/3yap94iqersK',
+      photo:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToM39JuAQDKksB7CKrgScA-Sh6Ct6Lcxk_N71nCQZcG7xGqKYD',
     },
   ];
-
-  function SlideIndications({ indicationMap, slideTitle }) {
-    return (
-      <SlideIndicationsContainer>
-        <div className="title-section">
-          <img src={ellipsis} alt="Ellipsis" />
-          <h1>{slideTitle}</h1>
-        </div>
-        <Splide
-          options={{
-            autoplay: true,
-            perPage: 4,
-            interval: 2500,
-            arrows: true,
-            height: 250,
-            width: 1320,
-            type: 'loop',
-          }}
-        >
-          {indicationMap.map((book, index) => (
-            <SplideSlide key={index + 1}>
-              <a href={book.link} target="_blank" rel="noopener noreferrer">
-                <img src={book.photo} alt={book.name} />
-                <h1>{book.name}</h1>
-              </a>
-            </SplideSlide>
-          ))}
-        </Splide>
-      </SlideIndicationsContainer>
-    );
-  }
 
   return (
     <>
@@ -135,7 +93,7 @@ function App() {
             height={450}
             width={1320}
             interval={2500}
-            autoplay
+            arrows={false}
           />
         </ImageSliderContainer>
         <Content>
@@ -169,20 +127,24 @@ function App() {
               />
             </aside>
           </main>
-          {booksIndication.map((indication, index) => (
-            <SlideIndications
-              key={index}
-              indicationMap={indication.books}
-              slideTitle={indication.slideTitle}
+          <ImageSliderContainer imageHeight="250px" imageWidth="170px">
+            <ImageSlider
+              images={booksIndication}
+              height={250}
+              interval={2500}
+              arrows={true}
+              perPage={booksIndication.length >= 5 ? 5 : booksIndication.length}
             />
-          ))}
-          {filmsIndication.map((indication, index) => (
-            <SlideIndications
-              key={index}
-              indicationMap={indication.films}
-              slideTitle={indication.slideTitle}
+          </ImageSliderContainer>
+          <ImageSliderContainer imageHeight="250px" imageWidth="170px">
+            <ImageSlider
+              images={filmsIndication}
+              height={250}
+              interval={2500}
+              arrows={true}
+              perPage={filmsIndication.length >= 5 ? 5 : filmsIndication.length}
             />
-          ))}
+          </ImageSliderContainer>
         </Content>
       </Container>
 

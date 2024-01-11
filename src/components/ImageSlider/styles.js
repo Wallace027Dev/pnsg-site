@@ -9,6 +9,10 @@ const StyledContainer = styled.div`
     height: ${(props) => props.imageHeight || '450px'};
     object-fit: cover;
   }
+
+  li {
+    text-align: center;
+  }
 `;
 
 function ImageSliderContainer({ children, imageWidth, imageHeight }) {
