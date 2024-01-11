@@ -3,9 +3,9 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import Header from '../Header';
 import SideBar from '../SideBar';
+import ArticleContainer from '../ArticleContainer';
 
 import {
-  ArticleContainer,
   Container,
   Content,
   SlideMain,
@@ -89,24 +89,6 @@ function App() {
       ],
     },
   ];
-
-  function Article({ link, type, data, title, description }) {
-    return (
-      <ArticleContainer href={link} target="_blank" rel="noopener noreferrer">
-        <img src={destaque1} alt="Artigo tal" />
-        <div>
-          <div>
-            <strong>{type}</strong>
-            <span> | {data}</span>
-          </div>
-          <div>
-            <h1>{title}</h1>
-            <p>{description}</p>
-          </div>
-        </div>
-      </ArticleContainer>
-    );
-  }
 
   function Homilia({ title, description, instagramLink, buttonLink }) {
     return (
@@ -210,8 +192,9 @@ function App() {
                 <h1>ARTIGOS E NOTÍCIAS</h1>
               </div>
               <hr />
-              <Article
+              <ArticleContainer
                 type="Nome do tipo"
+                image={destaque1}
                 data="01.01.0001"
                 title="Nome do Artigo"
                 description="Descrição do artigo"

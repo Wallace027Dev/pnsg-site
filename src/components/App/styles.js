@@ -59,61 +59,6 @@ export const Content = styled.div`
   }
 `;
 
-export const ArticleContainer = styled.a`
-  display: flex;
-  text-decoration: none;
-
-  img {
-    width: 300px;
-    height: 180px;
-    object-fit: cover;
-    margin-right: 25px;
-    border-radius: 2.5px;
-  }
-
-  strong {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--secondary);
-  }
-
-  span {
-    font-size: 12px;
-    color: var(--tertiary);
-    word-spacing: 5px;
-  }
-
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary);
-    margin: 12px 0;
-  }
-
-  p {
-    font-size: 16px;
-    color: var(--tertiary);
-  }
-
-  @media only screen and (min-width: 768px) {
-    img {
-      &:hover {
-        cursor: pointer;
-        filter: brightness(50%);
-        transition: filter 0.6s ease;
-      }
-    }
-
-    h1 {
-      &:hover {
-        cursor: pointer;
-        color: var(--red);
-        transition: color 0.4s ease;
-      }
-    }
-  }
-`;
-
 export const HomiliaVideo = styled.div`
   background: var(--primary);
   width: 470px;
