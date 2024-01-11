@@ -9,16 +9,6 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const SlideMain = styled.div`
-  margin: 48px auto;
-
-  img {
-    width: 1320px;
-    height: 450px;
-    object-fit: cover;
-  }
-`;
-
 export const Content = styled.div`
   main {
     margin-left: 0;

@@ -8,7 +8,6 @@ import ArticleContainer from '../ArticleContainer';
 import {
   Container,
   Content,
-  SlideMain,
   SlideIndicationsContainer,
   Footer,
 } from './styles';
@@ -20,6 +19,8 @@ import destaque1 from '../../assets/images/destaque1.jpg';
 import destaque2 from '../../assets/images/destaque2.jpg';
 import destaque3 from '../../assets/images/destaque3.jpg';
 import AsideContainer from '../AsideContainer';
+import ImageSlider from '../ImageSlider';
+import ImageSliderContainer from '../ImageSlider/styles';
 
 function App() {
   document.addEventListener('scroll', () => {
@@ -45,6 +46,8 @@ function App() {
     setSidebarOpen(false);
     setContentBlurred(false);
   };
+
+  const imagesForSlider = [destaque1, destaque2, destaque3];
 
   const booksIndication = [
     {
@@ -126,35 +129,15 @@ function App() {
       <SideBar isOpen={isSidebarOpen} onLinkClick={handleLinkClick} />
 
       <Container className={isContentBlurred ? 'blur' : ''}>
-        <SlideMain>
-          <Splide
-            options={{
-              autoplay: true,
-              perPage: 1,
-              interval: 2500,
-              arrows: false,
-              height: 450,
-              width: 1320,
-              type: 'loop',
-            }}
-          >
-            <SplideSlide>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                <img src={destaque1} alt="Destaque 1" />
-              </a>
-            </SplideSlide>
-            <SplideSlide>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                <img src={destaque2} alt="Destaque 2" />
-              </a>
-            </SplideSlide>
-            <SplideSlide>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                <img src={destaque3} alt="Destaque 3" />
-              </a>
-            </SplideSlide>
-          </Splide>
-        </SlideMain>
+        <ImageSliderContainer imageWidth="1320px" imageHeight="450px">
+          <ImageSlider
+            images={imagesForSlider}
+            height={450}
+            width={1320}
+            interval={2500}
+            autoplay
+          />
+        </ImageSliderContainer>
         <Content>
           <main>
             <section>
