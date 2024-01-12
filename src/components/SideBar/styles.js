@@ -24,7 +24,7 @@ const Container = styled.div`
     padding: 15px 10px;
     text-decoration: none;
     font-size: 18px;
-    color: var(--font);
+    color: var(--tertiary);
     display: block;
     transition: 0.3s;
     border: none;
@@ -45,7 +45,6 @@ const Container = styled.div`
     top: 10px;
     right: 10px;
     font-size: 20px;
-    background: var(--font);
     color: var(--primary);
     padding: 2px 6px;
     border-radius: 50%;
