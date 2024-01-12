@@ -7,21 +7,3 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
-export const Content = styled.div`
-  padding: 0 95px;
-  main {
-    margin-left: 0;
-    transition: margin-left 0.5s;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  > section {
-    width: 800px;
-  }
-
-  aside {
-    width: 470px;
-  }
-`;
