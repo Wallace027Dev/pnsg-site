@@ -32,11 +32,11 @@ function App() {
   };
 
   return (
-    <>
+    <Container>
       <Header onMenuClick={handleMenuClick} />
       <SideBar isOpen={isSidebarOpen} onLinkClick={handleLinkClick} />
 
-      <Container className={isContentBlurred ? 'blur' : ''}>
+      <Content className={isContentBlurred ? 'blur' : ''}>
         <ImageSliderContainer imageWidth="1320px" imageHeight="450px">
           <ImageSlider
             images={imagesForSlider}
@@ -47,56 +47,63 @@ function App() {
           />
         </ImageSliderContainer>
 
-        <Content>
-          <main>
-            <section>
-              <SectionSeparator sectionName="ARTIGOS E NOTÍCIAS" />
-              <ArticleContainer
-                type="Nome do tipo"
-                image={logo}
-                data="01.01.0001"
-                title="Nome do Artigo"
-                description="Descrição do artigo"
-              />
-            </section>
-
-            <aside>
-              <SectionSeparator sectionName="HOMILIAS" />
-              <AsideContainer
-                title="Nome da Homilia"
-                description="Descrição da Homilia"
-                instagramLink="link para o instagram"
-                buttonLink="link para outra página"
-              />
-            </aside>
-          </main>
-
-          <SectionSeparator sectionName="INDICAÇÃO DE LIVROS" />
-          <ImageSliderContainer imageHeight="175px" imageWidth="117px">
-            <ImageSlider
-              images={booksIndication}
-              height={175}
-              interval={1500}
-              arrows={true}
-              perPage={booksIndication.length >= 5 ? 5 : booksIndication.length}
+        <main>
+          <section id="artigos-e-noticias">
+            <SectionSeparator
+              id="artigos-e-noticias"
+              sectionName="ARTIGOS E NOTÍCIAS"
             />
-          </ImageSliderContainer>
-
-          <SectionSeparator sectionName="INDICAÇÃO DE FILMES" />
-          <ImageSliderContainer imageHeight="175px" imageWidth="117px">
-            <ImageSlider
-              images={filmsIndication}
-              height={175}
-              interval={1500}
-              arrows={true}
-              perPage={filmsIndication.length >= 5 ? 5 : filmsIndication.length}
+            <ArticleContainer
+              type="Nome do tipo"
+              image={logo}
+              data="01.01.0001"
+              title="Nome do Artigo"
+              description="Descrição do artigo"
             />
-          </ImageSliderContainer>
-        </Content>
-      </Container>
+          </section>
+
+          <aside id="homilias">
+            <SectionSeparator sectionName="HOMILIAS" />
+            <AsideContainer
+              title="Nome da Homilia"
+              description="Descrição da Homilia"
+              instagramLink="link para o instagram"
+              buttonLink="link para outra página"
+            />
+          </aside>
+        </main>
+
+        <SectionSeparator
+          id="indicacao-de-livros"
+          sectionName="INDICAÇÃO DE LIVROS"
+        />
+        <ImageSliderContainer imageHeight="175px" imageWidth="117px">
+          <ImageSlider
+            images={booksIndication}
+            height={175}
+            interval={1500}
+            arrows={true}
+            perPage={booksIndication.length >= 5 ? 5 : booksIndication.length}
+          />
+        </ImageSliderContainer>
+
+        <SectionSeparator
+          id="indicacao-de-filmes"
+          sectionName="INDICAÇÃO DE FILMES"
+        />
+        <ImageSliderContainer imageHeight="175px" imageWidth="117px">
+          <ImageSlider
+            images={filmsIndication}
+            height={175}
+            interval={1500}
+            arrows={true}
+            perPage={filmsIndication.length >= 5 ? 5 : filmsIndication.length}
+          />
+        </ImageSliderContainer>
+      </Content>
 
       <Footer />
-    </>
+    </Container>
   );
 }
 

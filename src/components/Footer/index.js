@@ -38,7 +38,7 @@ function Footer() {
           ))}
         </section>
 
-        <div>
+        <div id="redes">
           <h1>REDES</h1>
           {['Rede 1', 'Rede 2', 'Rede 3'].map((network, index) => (
             <a key={index} href="/">

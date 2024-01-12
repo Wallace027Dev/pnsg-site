@@ -1,5 +1,6 @@
 import logo from '../../assets/images/logo.svg';
 import Container from './styles';
+import scrollToSection from '../../utils/scrollToSection';
 
 function SideBar({ isOpen, onLinkClick }) {
   return (
@@ -9,15 +10,46 @@ function SideBar({ isOpen, onLinkClick }) {
         <h1>Paróquia Nossa Senhora da Glória</h1>
         <p>"Nossa senhora da Glória, rogai por nós"</p>
       </div>
-      <a href="#section1" onClick={onLinkClick}>
-        Section 1
-      </a>
-      <a href="#section2" onClick={onLinkClick}>
-        Section 2
-      </a>
-      <a href="#section3" onClick={onLinkClick}>
-        Section 3
-      </a>
+      <button
+        onClick={() => {
+          scrollToSection('artigos-e-noticias');
+          onLinkClick();
+        }}
+      >
+        Artigos e Notícias
+      </button>
+      <button
+        onClick={() => {
+          scrollToSection('homilias');
+          onLinkClick();
+        }}
+      >
+        Homilias
+      </button>
+      <button
+        onClick={() => {
+          scrollToSection('indicacao-de-livros');
+          onLinkClick();
+        }}
+      >
+        Indicação de Livros
+      </button>
+      <button
+        onClick={() => {
+          scrollToSection('indicacao-de-filmes');
+          onLinkClick();
+        }}
+      >
+        Indicação de Filmes
+      </button>
+      <button
+        onClick={() => {
+          scrollToSection('redes');
+          onLinkClick();
+        }}
+      >
+        Redes
+      </button>
       <button className="close-btn" onClick={onLinkClick}>
         X
       </button>

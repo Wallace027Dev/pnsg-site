@@ -16,24 +16,27 @@ const Container = styled.div`
   box-shadow: 2px 0 5px var(--tertiary);
 
   div,
-  a {
+  button {
     opacity: 1;
   }
 
-  a {
+  button {
     padding: 15px 10px;
     text-decoration: none;
     font-size: 18px;
     color: var(--font);
     display: block;
     transition: 0.3s;
+    border: none;
+    background: none;
   }
 
-  a:hover {
-    color: var(--bg);
+  button:hover {
+    color: var(--secondary);
+    cursor: pointer;
   }
 
-  a:focus {
+  button:focus {
     outline: none;
   }
 
@@ -42,7 +45,7 @@ const Container = styled.div`
     top: 10px;
     right: 10px;
     font-size: 20px;
-    background: var(--tertiary);
+    background: var(--font);
     color: var(--primary);
     padding: 2px 6px;
     border-radius: 50%;
