@@ -72,10 +72,10 @@ function App() {
           </main>
 
           <SectionSeparator sectionName="INDICAÇÃO DE LIVROS" />
-          <ImageSliderContainer imageHeight="150px" imageWidth="120px">
+          <ImageSliderContainer imageHeight="175px" imageWidth="117px">
             <ImageSlider
               images={booksIndication}
-              height={150}
+              height={175}
               interval={1500}
               arrows={true}
               perPage={booksIndication.length >= 5 ? 5 : booksIndication.length}
@@ -83,10 +83,10 @@ function App() {
           </ImageSliderContainer>
 
           <SectionSeparator sectionName="INDICAÇÃO DE FILMES" />
-          <ImageSliderContainer imageHeight="150px" imageWidth="120px">
+          <ImageSliderContainer imageHeight="175px" imageWidth="117px">
             <ImageSlider
               images={filmsIndication}
-              height={150}
+              height={175}
               interval={1500}
               arrows={true}
               perPage={filmsIndication.length >= 5 ? 5 : filmsIndication.length}
