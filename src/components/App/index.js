@@ -1,21 +1,21 @@
 import { useState } from 'react';
 
-import Header from '../Header';
-import SideBar from '../SideBar';
 import ArticleContainer from '../ArticleContainer';
 import AsideContainer from '../AsideContainer';
+import Header from '../Header';
+import Footer from '../Footer';
 import ImageSlider from '../ImageSlider';
+import SideBar from '../SideBar';
+import SectionSeparator from '../SectionSeparator';
 
-import ImageSliderContainer from '../ImageSlider/styles';
 import { Container, Content } from './styles';
+import ImageSliderContainer from '../ImageSlider/styles';
 
-import ellipsis from '../../assets/icons/ellipsis.svg';
 import logo from '../../assets/images/logo.svg';
 
 import imagesForSlider from '../../mocks/highlightsSlider';
 import booksIndication from '../../mocks/booksIndication';
 import filmsIndication from '../../mocks/filmsIndication';
-import Footer from '../Footer';
 
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -50,11 +50,7 @@ function App() {
         <Content>
           <main>
             <section>
-              <div className="title-section">
-                <img src={ellipsis} alt="Ellipsis Menu" />
-                <h1>ARTIGOS E NOTÍCIAS</h1>
-              </div>
-              <hr />
+              <SectionSeparator sectionName="ARTIGOS E NOTÍCIAS" />
               <ArticleContainer
                 type="Nome do tipo"
                 image={logo}
@@ -65,11 +61,7 @@ function App() {
             </section>
 
             <aside>
-              <div className="title-section">
-                <img src={ellipsis} alt="Ellipsis Menu" />
-                <h1>HOMILIAS</h1>
-              </div>
-              <hr />
+              <SectionSeparator sectionName="HOMILIAS" />
               <AsideContainer
                 title="Nome da Homilia"
                 description="Descrição da Homilia"
@@ -78,11 +70,8 @@ function App() {
               />
             </aside>
           </main>
-          <div className="title-section">
-            <img src={ellipsis} alt="Ellipsis Menu" />
-            <h1>INDICAÇÃO DE LIVROS</h1>
-          </div>
-          <hr />
+
+          <SectionSeparator sectionName="INDICAÇÃO DE LIVROS" />
           <ImageSliderContainer imageHeight="150px" imageWidth="120px">
             <ImageSlider
               images={booksIndication}
@@ -92,11 +81,8 @@ function App() {
               perPage={booksIndication.length >= 5 ? 5 : booksIndication.length}
             />
           </ImageSliderContainer>
-          <div className="title-section">
-            <img src={ellipsis} alt="Ellipsis Menu" />
-            <h1>INDICAÇÃO DE FILMES</h1>
-          </div>
-          <hr />
+
+          <SectionSeparator sectionName="INDICAÇÃO DE FILMES" />
           <ImageSliderContainer imageHeight="150px" imageWidth="120px">
             <ImageSlider
               images={filmsIndication}

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import '@splidejs/react-splide/css';
 
 export const Container = styled.div`
+  border: red solid 1px;
   padding: 0 100px;
   margin-top: 60px;
   display: flex;
@@ -23,20 +24,6 @@ export const Content = styled.div`
 
     :not(:first) {
       margin: 30px 0;
-    }
-  }
-
-  .title-section {
-    display: flex;
-    align-items: center;
-
-    h1 {
-      color: var(--primary);
-      font-size: 16px;
-    }
-
-    img {
-      height: 16px;
     }
   }
 
