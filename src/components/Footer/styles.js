@@ -10,8 +10,13 @@ export const Container = styled.footer`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 1320px;
     margin: 0 auto;
+    max-width: 1320px;
+    width: 100%;
+
+    @media screen and (max-width: 1440px) {
+      flex-direction: column;
+    }
   }
 
   section {

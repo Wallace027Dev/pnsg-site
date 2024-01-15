@@ -20,6 +20,7 @@ const Container = styled.header`
     justify-content: space-between;
     align-items: center;
     max-width: 1320px;
+    width: 100%;
     margin: 10px auto;
 
     button {

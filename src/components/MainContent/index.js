@@ -12,13 +12,21 @@ import ArticleContainer from '../ArticleContainer';
 import AsideContainer from '../AsideContainer';
 
 function MainContent({ isContentBlurred }) {
+  const mainSlider = {
+    width: '100%', // Ajusta a largura da imagem para ocupar 100% do contêiner pai
+    height: 'auto', // Mantém a proporção original da imagem
+  };
+
+  const indicationSlider = {
+    width: '117px',
+    height: '175px',
+  };
+
   return (
     <Container className={isContentBlurred ? 'blur' : ''}>
       <ImageSlider
-        className="main-slider"
         images={imagesForSlider}
-        imageHeight="450px"
-        imageWidth="1320px"
+        imageStyles={mainSlider}
         sliderHeight={450}
         interval={2500}
         arrows={false}
@@ -56,8 +64,7 @@ function MainContent({ isContentBlurred }) {
       />
       <ImageSlider
         images={booksIndication}
-        imageHeight="175px"
-        imageWidth="117px"
+        imageStyles={indicationSlider}
         sliderHeight={175}
         interval={1500}
         arrows={true}
@@ -70,8 +77,7 @@ function MainContent({ isContentBlurred }) {
       />
       <ImageSlider
         images={filmsIndication}
-        imageHeight="175px"
-        imageWidth="117px"
+        imageStyles={indicationSlider}
         sliderHeight={175}
         interval={1500}
         arrows={true}
