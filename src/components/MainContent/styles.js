@@ -2,11 +2,14 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   padding: 0 95px;
+
   main {
     margin-left: 0;
     transition: margin-left 0.5s;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
   }
 
   > section {
