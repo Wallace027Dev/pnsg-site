@@ -16,6 +16,30 @@ const Container = styled.div`
   aside {
     width: 470px;
   }
+
+  img {
+    .main-slider {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+
+      @media only screen and (max-width: 425px) {
+        height: 250px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        height: 300px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        height: 375px;
+      }
+    }
+  }
+
+  li {
+    text-align: center;
+  }
 `;
 
 export default Container;

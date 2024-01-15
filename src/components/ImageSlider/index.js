@@ -6,9 +6,7 @@ import ImageSliderContainer from './styles';
 function ImageSlider({
   images,
   sliderWidth,
-  imageWidth,
   sliderHeight,
-  imageHeight,
   interval,
   perPage,
   arrows,
@@ -24,7 +22,7 @@ function ImageSlider({
   };
 
   return (
-    <ImageSliderContainer imageWidth={imageWidth} imageHeight={imageHeight}>
+    <ImageSliderContainer>
       <Splide options={sliderOptions}>
         {images.map((image, index) => (
           <SplideSlide key={index}>

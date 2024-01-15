@@ -15,6 +15,7 @@ function MainContent({ isContentBlurred }) {
   return (
     <Container className={isContentBlurred ? 'blur' : ''}>
       <ImageSlider
+        className="main-slider"
         images={imagesForSlider}
         imageHeight="450px"
         imageWidth="1320px"
