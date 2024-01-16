@@ -2,36 +2,33 @@ import logo from '../../assets/images/logo.svg';
 import Container from './styles';
 
 function Footer() {
+  const shortcuts = [
+    {
+      title: 'POSTAGENS',
+      options: [
+        { name: 'Artigos e Notícias', shortcut: 'artigos-e-noticias' },
+        { name: 'Homilias', shortcut: 'homilias' },
+      ],
+    },
+    {
+      title: 'INDICAÇÕES',
+      options: [
+        { name: 'Indicação de Livros', shortcut: 'indicacao-de-livros' },
+        { name: 'Indicação de Filmes', shortcut: 'indicacao-de-filmes' },
+      ],
+    },
+  ];
+
   return (
     <Container>
       <div className="footer-container">
         <section>
-          {[
-            {
-              title: 'ASSUNTO 1',
-              options: ['Opção 1', 'Opção 2', 'Opção 3', 'Opção 4'],
-            },
-            {
-              title: 'ASSUNTO 2',
-              options: [
-                'Opção 1',
-                'Opção 2',
-                'Opção 3',
-                'Opção 4',
-                'Opção 5',
-                'Opção 6',
-              ],
-            },
-            {
-              title: 'ASSUNTO 3',
-              options: ['Opção 1', 'Opção 2', 'Opção 3', 'Opção 4', 'Opção 5'],
-            },
-          ].map((section, index) => (
+          {shortcuts.map((section, index) => (
             <div key={index}>
               <h1>{section.title}</h1>
               {section.options.map((option, idx) => (
-                <a key={idx} href="/">
-                  {option}
+                <a key={idx} href={option.shortcut}>
+                  {option.name}
                 </a>
               ))}
             </div>

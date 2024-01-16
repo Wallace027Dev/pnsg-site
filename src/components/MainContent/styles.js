@@ -6,11 +6,7 @@ const Container = styled.div`
     transition: margin-left 0.5s;
     display: flex;
     justify-content: space-between;
-
-    @media screen and (max-width: 1024px) {
-      flex-direction: column;
-      align-items: center;
-    }
+    margin-bottom: 30px;
   }
 
   > section {
@@ -19,6 +15,78 @@ const Container = styled.div`
 
   aside {
     width: 470px;
+  }
+
+  .posts {
+    a + a {
+      margin-top: 15px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      hr {
+        width: 768px;
+      }
+
+      > section {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > div {
+          display: flex;
+        }
+      }
+
+      aside {
+        width: 768px;
+        margin-top: 30px;
+      }
+    }
+
+    .posts {
+      a + a {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    main {
+      max-width: 425px;
+
+      > section {
+        width: 425px;
+
+        .posts {
+          display: flex;
+          flex-direction: column;
+          width: 300px;
+        }
+      }
+
+      aside {
+        width: 425px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    main {
+      > section {
+        width: 300px;
+      }
+
+      aside {
+        width: 300px;
+      }
+    }
   }
 `;
 

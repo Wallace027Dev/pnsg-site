@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Container = styled.a`
-  display: flex;
   text-decoration: none;
 
   img {
@@ -49,12 +48,35 @@ const Container = styled.a`
   }
 
   @media only screen and (min-width: 768px) {
+    img {
+      width: 210px;
+      height: 120px;
+    }
+
     img:hover {
       filter: brightness(50%);
     }
 
     h1:hover {
       color: var(--red);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    img {
+      margin-right: 0px;
+      width: 120px;
+      height: 85px;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    img {
+      margin-bottom: 16px;
     }
   }
 `;

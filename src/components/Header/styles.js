@@ -7,7 +7,6 @@ const Container = styled.header`
   width: 100%;
   background: var(--primary);
   height: 55px;
-  padding: 0 100px;
   transition: background 0.3s ease, opacity 0.3s ease;
 
   &.scrolled {
@@ -64,14 +63,16 @@ const Container = styled.header`
     }
   }
 
-  @media only screen and (max-width: 768px) {
-    padding: 0 20px;
+  @media only screen and (max-width: 1024px) {
+    > div {
+      max-width: 768px;
+    }
   }
 
-  @media only screen and (max-width: 425px) {
-    height: 40px;
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
     > div {
-      margin: 5px auto;
+      max-width: 425px;
 
       button {
         img {
@@ -84,6 +85,17 @@ const Container = styled.header`
         }
       }
 
+      .header-logo {
+        height: 25px;
+        left: 48.75%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    padding: 0 22.5px;
+    height: 40px;
+    > div {
       .header-logo {
         height: 25px;
         left: 47.5%;

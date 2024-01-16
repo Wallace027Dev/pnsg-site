@@ -27,34 +27,41 @@ function MainContent({ isContentBlurred }) {
       <ImageSlider
         images={imagesForSlider}
         imageStyles={mainSlider}
-        sliderHeight={450}
         interval={2500}
         arrows={false}
       />
 
       <main>
         <section id="artigos-e-noticias">
-          <SectionSeparator
-            id="artigos-e-noticias"
-            sectionName="ARTIGOS E NOTÍCIAS"
-          />
-          <ArticleContainer
-            type="Nome do tipo"
-            image={logo}
-            data="01.01.0001"
-            title="Nome do Artigo"
-            description="Descrição do artigo"
-          />
+          <SectionSeparator sectionName="ARTIGOS E NOTÍCIAS" />
+          <div className="posts">
+            <ArticleContainer
+              type="Nome do tipo"
+              image={logo}
+              data="01.01.0001"
+              title="Nome do Artigo"
+              description="Descrição do artigo"
+            />
+            <ArticleContainer
+              type="Nome do tipo"
+              image={logo}
+              data="01.01.0001"
+              title="Nome do Artigo"
+              description="Descrição do artigo"
+            />
+          </div>
         </section>
 
         <aside id="homilias">
           <SectionSeparator sectionName="HOMILIAS" />
-          <AsideContainer
-            title="Nome da Homilia"
-            description="Descrição da Homilia"
-            instagramLink="link para o instagram"
-            buttonLink="link para outra página"
-          />
+          <div className="posts">
+            <AsideContainer
+              title="Nome da Homilia"
+              description="Descrição da Homilia"
+              instagramLink="link para o instagram"
+              buttonLink="link para outra página"
+            />
+          </div>
         </aside>
       </main>
 
@@ -65,7 +72,6 @@ function MainContent({ isContentBlurred }) {
       <ImageSlider
         images={booksIndication}
         imageStyles={indicationSlider}
-        sliderHeight={175}
         interval={1500}
         arrows={true}
         perPage={booksIndication.length >= 5 ? 5 : booksIndication.length}
@@ -78,7 +84,6 @@ function MainContent({ isContentBlurred }) {
       <ImageSlider
         images={filmsIndication}
         imageStyles={indicationSlider}
-        sliderHeight={175}
         interval={1500}
         arrows={true}
         perPage={filmsIndication.length >= 5 ? 5 : filmsIndication.length}

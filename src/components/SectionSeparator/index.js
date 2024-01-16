@@ -3,7 +3,7 @@ import ellipsis from '../../assets/icons/ellipsis.svg';
 
 function SectionSeparator({ id, sectionName }) {
   return (
-    <Container id={id}>
+    <Container id={id} className="section-homilia">
       <span>
         <img src={ellipsis} alt="Ellipsis Menu" />
         <h1>{sectionName}</h1>

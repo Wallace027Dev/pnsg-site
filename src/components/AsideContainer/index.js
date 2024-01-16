@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import instagram from '../../assets/icons/instagram.svg';
 
 const VideoErrorMessage = () => (
-  <video controls height={260} width={469} preload="none">
+  <video controls preload="none">
     Desculpe, mas algo de errado aconteceu com seu vídeo
   </video>
 );

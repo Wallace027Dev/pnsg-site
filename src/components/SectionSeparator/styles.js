@@ -22,6 +22,14 @@ const Container = styled.div`
     margin: 10px 0 30px 0;
     width: 100%;
   }
+
+  @media only screen and (max-width: 768px) {
+    max-width: 425px;
+  }
+
+  @media only screen and (max-width: 425px) {
+    max-width: 300px;
+  }
 `;
 
 export default Container;

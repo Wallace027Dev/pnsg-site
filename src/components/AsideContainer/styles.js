@@ -2,7 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background: var(--primary);
-  width: 470px;
+  width: 100%;
+  border: 0.1px solid var(--primary);
+  border-radius: 5px;
+
+  video {
+    width: 99%;
+  }
 
   .video-text {
     h1 {
@@ -62,6 +68,22 @@ export const Container = styled.div`
       color: var(--red);
       transition: 0.4s ease-in-out;
       letter-spacing: 0.5px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 425px;
+
+    video {
+      width: 425px;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 300px;
+
+    video {
+      width: 300px;
     }
   }
 `;

@@ -3,20 +3,12 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import ImageSliderContainer from './styles';
 
-function ImageSlider({
-  images,
-  sliderHeight,
-  interval,
-  perPage,
-  arrows,
-  imageStyles,
-}) {
+function ImageSlider({ images, interval, perPage, arrows, imageStyles }) {
   const sliderOptions = {
     autoplay: true,
     arrows: arrows,
     perPage: perPage || 1,
     interval: interval || 2500,
-    height: sliderHeight || 450,
     type: 'loop',
     breakpoints: {
       1440: {
@@ -27,9 +19,10 @@ function ImageSlider({
       },
       768: {
         width: 425,
+        perPage: 1,
       },
       425: {
-        width: 300,
+        width: 320,
       },
     },
   };
