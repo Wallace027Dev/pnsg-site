@@ -14,7 +14,7 @@ import AsideContainer from '../AsideContainer';
 function MainContent({ isContentBlurred }) {
   const mainSlider = {
     width: '100%', // Ajusta a largura da imagem para ocupar 100% do contêiner pai
-    height: 'auto', // Mantém a proporção original da imagem
+    height: '500px', // Mantém a proporção original da imagem
   };
 
   const indicationSlider = {

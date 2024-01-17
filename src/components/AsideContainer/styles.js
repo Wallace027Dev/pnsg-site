@@ -3,13 +3,19 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: var(--primary);
   width: 100%;
-  border: 5px solid var(--primary);
+  border: 2.5px solid var(--primary);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 1px 5px;
+  padding: 2px 0.5px;
+
+  .video-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
   video {
     width: 99%;
@@ -34,6 +40,7 @@ export const Container = styled.div`
   .video-shortcuts {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     img {
       height: 38px;

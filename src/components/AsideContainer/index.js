@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import instagram from '../../assets/icons/instagram.svg';
 
-const VideoErrorMessage = () => (
+const VideoContainer = () => (
   <video controls preload="none">
     Desculpe, mas algo de errado aconteceu com seu vídeo
   </video>
@@ -32,12 +32,12 @@ const ButtonLink = ({ buttonLink }) => (
 function AsideContainer({ title, description, instagramLink, buttonLink }) {
   return (
     <Container>
-      <VideoErrorMessage />
-      <div>
+      <VideoContainer />
+      <div className="video-description">
         <VideoText title={title} description={description} />
         <div className="video-shortcuts">
-          {instagramLink && <InstagramShortcut instagramLink={instagramLink} />}
           {buttonLink && <ButtonLink buttonLink={buttonLink} />}
+          {instagramLink && <InstagramShortcut instagramLink={instagramLink} />}
         </div>
       </div>
     </Container>
