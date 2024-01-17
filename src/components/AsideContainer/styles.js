@@ -3,8 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: var(--primary);
   width: 100%;
-  border: 0.1px solid var(--primary);
+  border: 5px solid var(--primary);
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 5px;
 
   video {
     width: 99%;
@@ -80,10 +85,10 @@ export const Container = styled.div`
   }
 
   @media only screen and (max-width: 425px) {
-    width: 300px;
+    width: 250px;
 
     video {
-      width: 300px;
+      width: 250px;
     }
   }
 `;

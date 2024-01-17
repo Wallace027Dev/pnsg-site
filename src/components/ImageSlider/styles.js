@@ -3,10 +3,10 @@ import styled from 'styled-components';
 const StyledContainer = styled.div`
   margin: 48px auto;
   width: 100%;
-  max-width: 1320px;
+  max-width: 1440px;
 
   img {
-    width: ${(props) => props.imageWidth || '1320px'};
+    width: ${(props) => props.imageWidth || '1440px'};
     height: ${(props) => props.imageHeight || '450px'};
     object-fit: cover;
   }

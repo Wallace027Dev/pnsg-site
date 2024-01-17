@@ -24,11 +24,17 @@ const Container = styled.div`
   }
 
   @media only screen and (max-width: 768px) {
-    max-width: 425px;
+    hr {
+      max-width: 425px;
+    }
   }
 
   @media only screen and (max-width: 425px) {
-    max-width: 300px;
+    align-items: center;
+
+    hr {
+      max-width: 250px;
+    }
   }
 `;
 

@@ -22,7 +22,7 @@ function ImageSlider({ images, interval, perPage, arrows, imageStyles }) {
         perPage: 1,
       },
       425: {
-        width: 320,
+        width: 300,
       },
     },
   };

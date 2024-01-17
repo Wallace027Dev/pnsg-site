@@ -11,7 +11,7 @@ export const Container = styled.footer`
     align-items: start;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1320px;
+    max-width: 1440px;
     width: 100%;
   }
 
@@ -47,7 +47,8 @@ export const Container = styled.footer`
 
   hr {
     margin: 32px auto;
-    max-width: 1320px;
+    max-width: 1440px;
+    width: 100%;
   }
 
   .footer-logo {
@@ -84,7 +85,7 @@ export const Container = styled.footer`
 
     .footer-container,
     hr {
-      max-width: 425px;
+      max-width: 375px;
     }
 
     h1 {
@@ -96,7 +97,7 @@ export const Container = styled.footer`
     gap: 24px;
   }
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 500px) {
     padding: 90px 0;
 
     .footer-container {
@@ -106,6 +107,11 @@ export const Container = styled.footer`
       section {
         margin-bottom: 36px;
       }
+    }
+
+    .footer-container,
+    hr {
+      max-width: 250px;
     }
   }
 

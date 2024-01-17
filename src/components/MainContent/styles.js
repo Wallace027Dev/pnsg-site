@@ -34,7 +34,6 @@ const Container = styled.div`
       }
 
       > section {
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -79,12 +78,16 @@ const Container = styled.div`
 
   @media screen and (max-width: 425px) {
     main {
+      max-width: 300px;
       > section {
         width: 300px;
       }
 
       aside {
         width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
