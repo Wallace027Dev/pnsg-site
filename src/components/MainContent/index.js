@@ -1,5 +1,3 @@
-import logo from '../../assets/images/logo.svg';
-
 import Container from './styles';
 
 import imagesForSlider from '../../mocks/highlightsSlider';
@@ -8,18 +6,18 @@ import filmsIndication from '../../mocks/filmsIndication';
 
 import ImageSlider from '../ImageSlider';
 import SectionSeparator from '../SectionSeparator';
-import ArticleContainer from '../ArticleContainer';
-import AsideContainer from '../AsideContainer';
+import Image from '../Image';
+import Video from '../Video';
+
+import historiaDaIgreja from '../../assets/videos/historiaDaIgreja.mp4';
 
 function MainContent({ isContentBlurred }) {
   const mainSlider = {
-    width: '100%', // Ajusta a largura da imagem para ocupar 100% do contêiner pai
-    height: '500px', // Mantém a proporção original da imagem
+    width: '100%',
   };
 
   const indicationSlider = {
     width: '117px',
-    height: '175px',
   };
 
   return (
@@ -35,27 +33,15 @@ function MainContent({ isContentBlurred }) {
         <section id="artigos-e-noticias">
           <SectionSeparator sectionName="ARTIGOS E NOTÍCIAS" />
           <div className="posts">
-            <ArticleContainer
-              type="Nome do tipo"
-              image={logo}
-              data="01.01.0001"
-              title="Nome do Artigo"
-              description="Descrição do artigo"
-            />
-            <ArticleContainer
-              type="Nome do tipo"
-              image={logo}
-              data="01.01.0001"
-              title="Nome do Artigo"
-              description="Descrição do artigo"
-            />
+            <Image />
           </div>
         </section>
 
         <aside id="homilias">
           <SectionSeparator sectionName="HOMILIAS" />
           <div className="posts">
-            <AsideContainer
+            <Video
+              videoArchive={historiaDaIgreja}
               title="Nome da Homilia"
               description="Descrição da Homilia"
               instagramLink="link para o instagram"

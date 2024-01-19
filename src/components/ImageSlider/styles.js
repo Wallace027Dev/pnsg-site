@@ -7,8 +7,6 @@ const StyledContainer = styled.div`
 
   img {
     width: ${(props) => props.imageWidth || '1440px'};
-    height: ${(props) => props.imageHeight || '450px'};
-    object-fit: cover;
   }
 
   li {

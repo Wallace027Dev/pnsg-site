@@ -93,8 +93,6 @@ const Container = styled.header`
   }
 
   @media only screen and (max-width: 425px) {
-    padding: 0 22.5px;
-    height: 40px;
     > div {
       .header-logo {
         height: 25px;
