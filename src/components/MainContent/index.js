@@ -9,8 +9,6 @@ import SectionSeparator from '../SectionSeparator';
 import Image from '../Image';
 import Video from '../Video';
 
-import historiaDaIgreja from '../../assets/videos/historiaDaIgreja.mp4';
-
 function MainContent({ isContentBlurred }) {
   const mainSlider = {
     width: '100%',
@@ -41,7 +39,6 @@ function MainContent({ isContentBlurred }) {
           <SectionSeparator sectionName="HOMILIAS" />
           <div className="posts">
             <Video
-              videoArchive={historiaDaIgreja}
               title="Nome da Homilia"
               description="Descrição da Homilia"
               instagramLink="link para o instagram"
