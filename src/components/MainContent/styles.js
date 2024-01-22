@@ -17,16 +17,25 @@ const Container = styled.div`
     width: 470px;
   }
 
-  .posts {
-    a + a {
-      margin-top: 15px;
+  .videoPosts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div + div {
+      margin-top: 16px;
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  .articlePosts {
+    a + a {
+      margin-top: 16px;
+    }
+  }
+
+  @media screen and (max-width: 1160px) {
     main {
       flex-direction: column;
-      align-items: center;
       justify-content: center;
 
       hr {
@@ -49,7 +58,13 @@ const Container = styled.div`
       }
     }
 
-    .posts {
+    .videoPosts {
+    }
+
+    .articlePosts {
+      display: flex;
+      flex-direction: column;
+
       a + a {
         margin-top: 0px;
       }
@@ -63,7 +78,7 @@ const Container = styled.div`
       > section {
         width: 425px;
 
-        .posts {
+        .articlePosts {
           display: flex;
           flex-direction: column;
           width: 300px;

@@ -10,11 +10,12 @@ function ImageSlider({ images, interval, perPage, arrows, imageStyles }) {
     perPage: perPage || 1,
     interval: interval || 2500,
     type: 'loop',
+    width: 1440,
     breakpoints: {
       1440: {
-        width: 1024,
+        width: 1180,
       },
-      1024: {
+      1180: {
         width: 768,
       },
       768: {

@@ -30,14 +30,20 @@ function MainContent({ isContentBlurred }) {
       <main>
         <section id="artigos-e-noticias">
           <SectionSeparator sectionName="ARTIGOS E NOTÍCIAS" />
-          <div className="posts">
+          <div className="articlePosts">
             <Image />
           </div>
         </section>
 
         <aside id="homilias">
           <SectionSeparator sectionName="HOMILIAS" />
-          <div className="posts">
+          <div className="videoPosts">
+            <Video
+              title="Nome da Homilia"
+              description="Descrição da Homilia"
+              instagramLink="link para o instagram"
+              buttonLink="link para outra página"
+            />
             <Video
               title="Nome da Homilia"
               description="Descrição da Homilia"

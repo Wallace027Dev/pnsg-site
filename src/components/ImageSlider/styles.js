@@ -4,6 +4,9 @@ const StyledContainer = styled.div`
   margin: 48px auto;
   width: 100%;
   max-width: 1440px;
+  display: flex;
+  align-items: ce;
+  justify-content: center;
 
   img {
     width: ${(props) => props.imageWidth || '1440px'};
