@@ -18,9 +18,10 @@ const Container = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
+    max-width: 1180px;
     width: 100%;
     margin: 10px auto;
+    padding: 0 16px;
 
     button {
       display: flex;
@@ -66,6 +67,7 @@ const Container = styled.header`
   @media only screen and (max-width: 1024px) {
     > div {
       max-width: 768px;
+      padding: 0;
     }
   }
 
