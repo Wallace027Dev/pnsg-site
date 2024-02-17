@@ -21,6 +21,7 @@ export const Container = styled.form`
 
   input,
   select {
+    width: 100%;
     height: 32px;
     padding: 4px;
     border: none;
