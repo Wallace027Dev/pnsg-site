@@ -3,7 +3,7 @@ import { Container } from './styles';
 function SubscriptionForm() {
   return (
     <Container>
-      <h1>Junte-se a nossa família</h1>
+      <h2>JUNTE-SE A NOSSA FAMÍLIA</h2>
       <label htmlFor="comunity">Comunidade</label>
       <select name="comunity" id="comunity">
         <option value="Matrix">Nossa Senhora da Glória (Matrix)</option>
@@ -40,7 +40,7 @@ function SubscriptionForm() {
         placeholder="Digite o seu principal e-mail"
       />
 
-      <button>Inscreva-se</button>
+      <button>INSCREVER-SE</button>
     </Container>
   );
 }

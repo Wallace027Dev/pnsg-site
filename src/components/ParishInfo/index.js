@@ -3,7 +3,7 @@ import { Container } from './styles';
 function ParishInfo() {
   return (
     <Container>
-      <h1>Paróquia Nossa Senhora da Glória</h1>
+      <h2>Paróquia Nossa Senhora da Glória</h2>
       <p>"Nossa senhora da Glória, rogai por nós"</p>
     </Container>
   );
